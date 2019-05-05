@@ -1,8 +1,10 @@
 #include <stdio.h>
 
-const int V=4;
+#define VCONST 4
+
+const int V=VCONST;
 struct SOA_type{
-   int R[V], G[V], B[V];
+   int R[VCONST], G[VCONST], B[VCONST];
 }; 
 
 int main(int argc, char *argv[])

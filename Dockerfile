@@ -14,7 +14,7 @@ RUN cd Chapter4 && g++ -o Listing9 Listing9.cc
 RUN cd Chapter4 && gcc -c Listing10.c
 RUN cd Chapter4 && gcc -o Listing11 Listing11.c
 RUN cd Chapter4 && gcc -c Listing12.c
-#RUN cd Chapter4 && gcc -o Listing13 Listing13.c
+RUN cd Chapter4 && gcc -o Listing13 Listing13.c
 RUN cd Chapter4/Listing14 && make CC=gcc LIKWID_PATH=/usr && cd ../..
 
 RUN bash
