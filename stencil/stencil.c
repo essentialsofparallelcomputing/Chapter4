@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
    LIKWID_MARKER_INIT;
    LIKWID_MARKER_REGISTER("STENCIL");
-   struct timeval tstart_cpu, tstop_cpu;
+   struct timespec tstart_cpu, tstop_cpu;
    double cpu_time;
    int imax=2002, jmax = 2002;
 
