@@ -1,4 +1,4 @@
-default: Listing1 Listing2 Malloc2D Listing5 Listing6 Listing7 Listing8 Listing9 Listing10.o Listing11 Listing12.o Listing13 Listing14
+default: Listing1 Listing2 Malloc2D Listing5 Listing6 Listing7 Listing8 Listing9 Listing10 Listing11 Listing12 Listing13
 
 LDLIBS=-lm
 
@@ -23,11 +23,8 @@ Listing11: Listing11.o
 
 Listing13: Listing13.o
 
-Listing14:
-	cd Listing14 && make CC=gcc LIKWID_PATH=/usr 
-
 clean: 
-	rm -rf Listing1 Listing2 Listing5 Listing6 Listing7 Listing8 Listing9 Listing11 Listing13 Listing3and4/Malloc2D Listing14/Listing14 *.o */*.o
+	rm -rf Listing1 Listing2 Listing5 Listing6 Listing7 Listing8 Listing9 Listing11 Listing13 Listing3and4/Malloc2D *.o */*.o
 
 
 
