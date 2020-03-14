@@ -1,4 +1,4 @@
-default: Listing1 Listing2 Malloc2D Listing5 Listing6 Listing7 Listing8 Listing9 Listing10 Listing11 Listing12 Listing13
+default: Listing1 Listing2 Malloc2D Listing5 Listing6 Listing7 Listing8 Listing9 Listing10.o Listing11 Listing12.o Listing13
 
 LDLIBS=-lm
 
