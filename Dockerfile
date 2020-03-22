@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Installing latest GCC compiler (version 9) for best vectorization
+# Installing latest GCC compiler (version 9)
 RUN add-apt-repository ppa:ubuntu-toolchain-r/test
 RUN apt-get update && \
     apt-get install -y gcc-9 g++-9 gfortran-9 && \
@@ -29,6 +29,6 @@ USER chapter4
 RUN git clone https://github.com/essentialsofparallelcomputing/Chapter4.git
 
 WORKDIR /home/chapter4/Chapter4
-RUN make CC=gcc
+#RUN make CC=gcc
 
 ENTRYPOINT ["bash"]
