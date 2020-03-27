@@ -1,5 +1,5 @@
 # Chapter 4 Data design and performance models
-This is from Chapter 4 of the Parallel and High Performance Computing, Robey and Zamora,
+This is from Chapter 4 of Parallel and High Performance Computing, Robey and Zamora,
 Manning Publications, available at http://manning.com
 
 The book may be obtained at
