@@ -48,6 +48,6 @@ sudo update-alternatives --install /usr/bin/gcc       gcc       /usr/bin/gcc-9 9
                          --slave   /usr/bin/gfortran  gfortran  /usr/bin/gfortran-9 \
                          --slave   /usr/bin/gcov      gcov      /usr/bin/gcov-9
 
-If Software updater prompts, install updated software --> wait ....
+# If Software updater prompts, install updated software --> wait ....
 
 cd Chapter4 #&& make CC=gcc
