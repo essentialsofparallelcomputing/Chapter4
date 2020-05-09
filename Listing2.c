@@ -14,4 +14,10 @@ int main(int argc, char *argv[])
    for (int j = 1; j < jmax; j++) {
       x[j] = x[j-1] + imax;
    }
+
+   // Computation
+
+   // Deallocate memory
+   free(x[0]);
+   free(x);
 }

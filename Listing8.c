@@ -22,4 +22,11 @@ int main(int argc, char *argv[])
    for (int i=1; i < 1000; i++){
       density_gradient[i] = (density[i] - density[i-1])/(cell.x[i] - cell.x[i-1]);
    }
+
+   free(cell.x);
+   free(cell.y);
+   free(cell.z);
+   free(radius);
+   free(density);
+   free(density_gradient);
 }

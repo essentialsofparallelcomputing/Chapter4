@@ -11,4 +11,11 @@ int main(int argc, char *argv[])
   for (j=0; j<jmax; j++){
      x[j] = (double *)malloc(imax * sizeof(double));
   }
+
+  // computation
+
+  for (j=0; j<jmax; j++){
+     free(x[j]);
+  }
+  free(x);
 }

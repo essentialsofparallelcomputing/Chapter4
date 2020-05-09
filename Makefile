@@ -7,7 +7,7 @@ Listing1: Listing1.o
 Listing2: Listing2.o
 
 Malloc2D:
-	cd Listing3and4 && gcc -o Malloc2D malloc2D.c
+	cd Listing3and4 && gcc -I . -o Malloc2D malloc2D.c calc2D.c
 
 Listing5: Listing5.o
 
