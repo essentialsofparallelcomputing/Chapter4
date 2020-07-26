@@ -1,4 +1,4 @@
-default: stencil MultiMatTest
+default: MultiMatTest
 #default: Listing1 Listing2 Malloc2D Listing5 Listing6 Listing7 Listing8 Listing9 Listing10.o Listing11 Listing12.o Listing13 stencil MultiMatTest
 
 .PHONY: stencil MultiMatTest

@@ -26,7 +26,7 @@ WORKDIR /home/chapter4
 RUN chown -R chapter4:chapter4 /home/chapter4
 USER chapter4
 
-RUN git clone https://github.com/essentialsofparallelcomputing/Chapter4.git
+RUN git clone --recursive https://github.com/essentialsofparallelcomputing/Chapter4.git
 
 WORKDIR /home/chapter4/Chapter4
 #RUN make CC=gcc
