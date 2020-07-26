@@ -27,12 +27,12 @@ Listing11: Listing11.o
 Listing13: Listing13.o
 
 stencil:
-	cd stencil && mkdir build && cd build && cmake .. && make && likwid-perfctr -C 0 -g MEM_DP -m ./stencil
+	cd stencil && make && likwid-perfctr -C 0 -g MEM_DP -m ./stencil
 
 MultiMatTest:
 	cd MultiMatTest && mkdir build && cd build && cmake .. && make && ./MultiMatTest
 
 clean: 
 	rm -rf Listing1 Listing2 Listing5 Listing6 Listing7 Listing8 Listing9 Listing11 Listing13 Listing3and4/Malloc2D *.o */*.o
-	cd stencil && rm -rf build
+	cd stencil && make clean
 	cd MultMatTest && rm -rf build
