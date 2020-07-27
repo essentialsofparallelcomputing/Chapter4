@@ -27,7 +27,7 @@ Listing13: Listing13.o
 
 # likwid-perfctr will not work if you do not have the msr kernel module loaded in the host device when running in a container
 stencil:
-	cd stencil && make && likwid-perfctr -C 0 -g MEM_DP ./stencil #&& likwid-perfctr -C 0 -g MEM_DP -m ./stencil
+	cd stencil && make && ./stencil #&& likwid-perfctr -C 0 -g MEM_DP -m ./stencil
 
 MultiMatTest:
 	cd MultiMatTest && mkdir build && cd build && cmake .. && make && ./MultiMatTest
