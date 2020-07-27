@@ -19,6 +19,9 @@ RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 90\
                         --slave /usr/bin/gfortran gfortran /usr/bin/gfortran-10\
                         --slave /usr/bin/gcov gcov /usr/bin/gcov-10
 
+#RUN wget -q http://ftp.fau.de/pub/likwid/likwid-stable.tar.gz && i\
+#    tar -xjf likwid-stable.tar.bz2 && cd likwid-stable && make && make install
+
 SHELL ["/bin/bash", "-c"]
 
 RUN groupadd chapter4 && useradd -m -s /bin/bash -g chapter4 chapter4
@@ -27,7 +30,7 @@ WORKDIR /home/chapter4
 RUN chown -R chapter4:chapter4 /home/chapter4
 USER chapter4
 
-RUN git clone https://github.com/essentialsofparallelcomputing/Chapter4.git
+RUN git clone --recursive https://github.com/essentialsofparallelcomputing/Chapter4.git
 
 WORKDIR /home/chapter4/Chapter4
 #RUN make CC=gcc
