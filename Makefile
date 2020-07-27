@@ -35,4 +35,4 @@ MultiMatTest:
 clean: 
 	rm -rf Listing1 Listing2 Listing5 Listing6 Listing7 Listing8 Listing9 Listing11 Listing13 Listing3and4/Malloc2D *.o */*.o
 	cd stencil && make clean
-	cd MultMatTest && rm -rf build
+	cd MultiMatTest && rm -rf build

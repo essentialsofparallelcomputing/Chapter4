@@ -19,11 +19,6 @@ RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 90\
                         --slave /usr/bin/gfortran gfortran /usr/bin/gfortran-10\
                         --slave /usr/bin/gcov gcov /usr/bin/gcov-10
 
-RUN apt-get -qq update && \
-    apt-get -qq install -y kmod msr-tools && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
 SHELL ["/bin/bash", "-c"]
 
 RUN groupadd chapter4 && useradd -m -s /bin/bash -g chapter4 chapter4
@@ -35,6 +30,6 @@ USER chapter4
 RUN git clone --recursive https://github.com/essentialsofparallelcomputing/Chapter4.git
 
 WORKDIR /home/chapter4/Chapter4
-RUN make
+#RUN make
 
 ENTRYPOINT ["bash"]
