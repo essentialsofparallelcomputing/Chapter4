@@ -1,5 +1,4 @@
-default: MultiMatTest
-#default: Listing1 Listing2 Malloc2D Listing5 Listing6 Listing7 Listing8 Listing9 Listing10.o Listing11 Listing12.o Listing13 stencil MultiMatTest
+default: Listing1 Listing2 Malloc2D Listing5 Listing6 Listing7 Listing8 Listing9 Listing10.o Listing11 Listing12.o Listing13 stencil MultiMatTest
 
 .PHONY: stencil MultiMatTest
 
@@ -26,8 +25,9 @@ Listing11: Listing11.o
 
 Listing13: Listing13.o
 
+# likwid-perfctr will not work if you do not have the msr kernel module loaded in the host device when running in a container
 stencil:
-	cd stencil && make && likwid-perfctr -C 0 -g MEM_DP -m ./stencil
+	cd stencil && make && ./stencil && likwid-perfctr -C 0 -g MEM_DP -m ./stencil
 
 MultiMatTest:
 	cd MultiMatTest && mkdir build && cd build && cmake .. && make && ./MultiMatTest
