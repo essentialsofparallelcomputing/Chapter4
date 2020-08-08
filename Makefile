@@ -1,6 +1,8 @@
-default: Listing1 Listing2 Malloc2D Listing5 Listing6 Listing7 Listing8 Listing9 Listing10.o Listing11 Listing12.o Listing13 stencil MultiMatTest
+default: Listing1 Listing2 Malloc2D Listing5 Listing6 Listing7 Listing8 Listing9 Listing10.o Listing11 Listing12.o Listing13 \
+         stencil MultiMatTest roofline_plot
 
-.PHONY: stencil MultiMatTest
+.PHONY: Listing1 Listing2 Malloc2D Listing5 Listing6 Listing7 Listing8 Listing9 Listing10.o Listing11 Listing12.o Listing13 \
+         stencil MultiMatTest roofline_plot
 
 LDLIBS=-lm
 
@@ -32,7 +34,11 @@ stencil:
 MultiMatTest:
 	cd MultiMatTest && mkdir build && cd build && cmake .. && make && ./MultiMatTest
 
+roofline_plot:
+	python plot_roofline_stencil.py
+
 clean: 
 	rm -rf Listing1 Listing2 Listing5 Listing6 Listing7 Listing8 Listing9 Listing11 Listing13 Listing3and4/Malloc2D *.o */*.o
 	cd stencil && make clean
 	cd MultiMatTest && rm -rf build
+	rm -rf plot_roofline_stencil.png plot_roofline_stencil.svg plot_roofline_stencil.pdf
