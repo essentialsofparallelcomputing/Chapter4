@@ -34,13 +34,10 @@
 DEBIAN_FRONTEND=noninteractive
 sudo apt-get -qq update && \
 sudo apt-get -qq install -y cmake git vim gcc g++ gfortran software-properties-common \
-             python3-pip likwid
+             python3-pip python3-matplotlib python3-numpy likwid
 
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 30 \
                          --slave   /usr/bin/pip    pip    /usr/bin/pip3
-
-# Installing minimun set of python packages to keep image small. Anaconda would supply these as well
-sudo pip install numpy matplotlib
 
 # Installing latest GCC compiler (version 10) for best vectorization
 sudo apt-get -qq install -y gcc-10 g++-10 gfortran-10
