@@ -54,4 +54,6 @@ sudo update-alternatives --install /usr/bin/gcc       gcc       /usr/bin/gcc-10 
 
 # If Software updater prompts, install updated software --> wait ....
 
+source /opt/intel/inteloneapi/setvars.sh
+
 cd Chapter4 #&& make CC=gcc
