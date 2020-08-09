@@ -32,7 +32,6 @@ RUN groupadd chapter4 && useradd -m -s /bin/bash -g chapter4 chapter4
 WORKDIR /home/chapter4
 RUN chown -R chapter4:chapter4 /home/chapter4
 USER chapter4
-RUN source /opt/intel/oneapi/setvars.sh
 
 RUN git clone --recursive https://github.com/essentialsofparallelcomputing/Chapter4.git
 

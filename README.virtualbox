@@ -54,7 +54,4 @@ sudo update-alternatives --install /usr/bin/gcc       gcc       /usr/bin/gcc-10 
 
 # If Software updater prompts, install updated software --> wait ....
 
-source /opt/intel/inteloneapi/setvars.sh
-echo "source /opt/intel/oneapi/setvars.sh" >> ${HOME}/.bash_profile
-
 cd Chapter4 #&& make CC=gcc
