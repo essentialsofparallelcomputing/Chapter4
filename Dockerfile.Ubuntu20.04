@@ -3,7 +3,7 @@ WORKDIR /project
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -qq update && \
     apt-get -qq install -y cmake git vim gcc g++ gfortran software-properties-common \
-            python3-pip python3-matplotlib python3-numpy
+            python3-pip python3-matplotlib python3-numpy wget
 # likwid installed manually in container because msr is not accessible
 
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 30 \
