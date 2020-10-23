@@ -78,7 +78,7 @@ USER chapter4
 ENV LANG='en_US.UTF-8'
 ENV DISPLAY :0
 ENV NVIDIA_VISIBLE_DEVICES all
-ENV NVIDIA_DRIVER_CAPABILITIES display,video,graphics
+ENV NVIDIA_DRIVER_CAPABILITIES display,graphics,utility
 
 RUN git clone --recursive https://github.com/essentialsofparallelcomputing/Chapter4.git
 
